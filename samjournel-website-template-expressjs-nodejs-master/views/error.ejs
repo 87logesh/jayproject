@@ -1,0 +1,26 @@
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SAM JOURNAL</title>
+<link rel="stylesheet" href="/stylesheet/bootstrap.min.css" />
+<link rel="stylesheet" href="/stylesheet/home.css" />
+
+
+<script src="/javascripts/jquery.min.js"></script>
+<script src="/javascripts/popper.min.js"></script>
+<script src="/javascripts/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+<div class="jumbotron"> <p>
+    <% if (typeof TVU_USERNAME !== 'undefined' && TVU_USERNAME) { %><strong><%= TVU_USERNAME %></strong> <%} else { %> <strong>User</strong> <%}%> is not authorized to access this page. <a href="/" >Click here to access Home.</a>
+</p></div>
+
+</body>
+</html>

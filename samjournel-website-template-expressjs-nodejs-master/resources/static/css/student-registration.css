@@ -1,0 +1,66 @@
+.form-group {
+	padding-left: 1rem;
+}
+.nav-link dropdown-toggle{
+	background-color: #8a6d3b;
+	color: white;
+}
+.custom-dropdown-css{
+	background-color: gray !important;
+}
+.error {
+	color: red !important;
+	padding-left: 25px;
+}
+.success {
+	color: green !important;
+	padding-left: 25px;
+}
+
+/*Collapse CSS File */
+.collapse-header {
+	cursor: pointer;
+	background-color: rgb(241, 167, 117);
+	border-bottom: 1px groove #000000;
+	border-width:2px; 
+	border-radius:.25rem!important
+	
+}
+
+
+
+.collapse {
+	display: none !important;
+	
+}
+
+.collapse.show {
+	display: block !important;
+}
+.profile-upload-container{
+	position:relative;
+	text-align: right;
+}
+.profile-upload-container input[type="file"]{
+	opacity: 0;
+    width: 105px;
+    padding: 34px 0;
+    position: absolute;
+    top: 0px;
+    right: 3px;
+	border: 1px solid #ccc;
+	cursor:pointer;   
+}
+.profile-upload-container img{
+	width: 100px;
+    height: 100px;
+    border-radius: 80px;
+	box-shadow: 0px 3px 5px rgba(0,0,0,0.5);
+	cursor: pointer;
+}
+
+
+
+
+
+

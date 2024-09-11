@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Journals</title>
+    <link rel="icon" href="images/favicon.png">
+       
+
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/jquery-ui.css" />
+    <link rel="stylesheet" href="/static/css/dataTables.jqueryui.min.css" /> 
+    <link rel="stylesheet" href="/static/css/scroller.jqueryui.min.css" />
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="/static/css/animate.css">
+    <!-- owl carousel CSS -->
+    <link rel="stylesheet" href="/static/css/owl.carousel.min.css">
+    <!-- themify CSS -->
+    <link rel="stylesheet" href="/static/css/themify-icons.css">
+    <!-- flaticon CSS -->
+    <link rel="stylesheet" href="/static/css/flaticon.css">
+    <!-- font awesome CSS -->
+    <link rel="stylesheet" href="/static/css/magnific-popup.css">
+    
+    <link rel="stylesheet" href="/static/css/fontawesome.min.css">
+    <!-- swiper CSS -->
+    <link rel="stylesheet" href="/static/css/slick.css">
+    <!-- style CSS -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/home.css" />
+    <link rel="stylesheet" href="/static/css/nice-select.css">
+    
+    <link rel="stylesheet" href="/static/css/mimic.css">
+    <link rel="stylesheet" href="/static/css/student-registration.css">
+    <link rel="stylesheet" href="/static/css/staff.css">
+    <link rel="stylesheet" href="/static/css/common.css">
+</head>
+
+<body>
+
+    <!-- <form action="/submitpaper" id="was-validated" autocomplete="off" class="was-validated" method="post" enctype="multipart/form-data"></form> -->
+    <!--::header part start::-->
+    <%- include('header'); %>
+
+    <!-- <section class="banner_part_otherpage  special_cource padding_top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-5">
+                    <div class="section_tittle text-center">
+                        <H1>AUTHOR DETAILS</H1>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>   -->
+
+    <section class="banner_part_otherpage learning_part">
+        <div class="container">
+            <div class="row align-items-sm-center align-items-lg-stretch">
+                <div class="col-md-7 col-lg-12"> 
+
+                    <div class="section_tittle_new text-center">
+                        <H2>AUTHOR DETAILS</H2>
+                        
+                    </div>
+                 <div id="search_author_details_container" class="table-responsive" style="overflow-x: auto;">
+                <form id="search_author_details_form" class="was-validated">
+			        <table id="search_author_details_table" class="table table-striped table-bordered search-student-service-custom">
+				<tbody>
+					<tr>
+						
+								<td colspan="3">
+						
+									<label for="search_author_manuscript">Manuscript Type</label>
+                                     <select class="form-control form-rounded" id="search_author_manuscript" name="search_author_manuscript">
+                                        <option value="">Select</option>
+                                        <% manuscript.forEach(function(manuscriptVal){ %>
+                                        <option value="<%= manuscriptVal.value %>"><%= manuscriptVal.name %></option>
+                                        <% }) %>
+                                        <option value="'1','2','3','4','5','6','7','8','9'">ALL </option>
+                                        </select>
+                                     <div class="invalid-feedback">Please fill out this field.</div>							
+<!-- 							
+								<td colspan="3">
+									<label for="search_author_designation">designation:</label>
+                                     <select class="form-control form-rounded" id="search_author_designation" name="search_author_designation">
+                                        <option value="">Select</option>
+                                        <% designation.forEach(function(designationVal){ %>
+                                        <option value="<%= designationVal.value %>"><%= designationVal.name %></option>
+										<% }) %>
+										
+                                     </select>
+                                     <div class="invalid-feedback">Please fill out this field.</div>
+								</td> -->
+
+								
+
+						</tr>
+				</tbody>
+			</table>
+			<strong id="search_author_status_panel" class="search-student-error invisible" style="overflow-x: auto;"></strong>
+            </form>
+	</div>
+    
+    <br>
+    <div id="author_results_container" class="table-responsive invisible" style="overflow-x: auto;">
+		<table id="author_results" 	class="table table-striped table-bordered student-table-custom">
+			 
+			<thead>
+				
+				<tr>
+					<th>SNO</th>
+                    <th>IDNO</th>
+                    <th>AUTHOR NAME</th>
+                    <th>PAPER TITLE</th>
+					<th>MANUSCRIPT NAME</th>
+					<th>MANUSCRIPT NO</th>
+                    <th>UPLOADED FILE</th>
+                    <th>DATE</th>
+					
+				</tr>
+			</thead>
+            </table>
+    </div>
+
+    </div>
+    </div>
+
+</section>
+   
+    <%- include('footer'); %>
+
+
+
+    <script src="/static/javascripts/jquery-1.12.1.min.js"></script>
+    <!-- popper js -->
+    <script src="/static/javascripts/popper.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="/static/javascripts/bootstrap.min.js"></script>
+    <!-- easing js -->
+    <script src="/static/javascripts/jquery.magnific-popup.js"></script>
+    <script src="/static/javascripts/jquery.blockUI.js"></script>
+    <script src="/static/javascripts/2.15.1.moment.min.js"></script>    
+    
+    <script src="/static/javascripts/jquery.dataTables.min.1.10.20.js"></script>
+    <script src="/static/javascripts/dataTables.jqueryui.min.1.10.20.js"></script>
+    <script src="/static/javascripts/dataTables.scroller.min.2.0.1.js"></script>
+    <script src="/static/javascripts//dataTables.buttons.min.js"></script>
+    <script src="/static/javascripts//buttons.print.min.js"></script>
+    <script src="/static/javascripts/jszip.min.js"></script>
+    <script src="/static/javascripts/pdfmake.min.js"></script>
+    <script src="/static/javascripts/vfs_fonts.js"></script>
+    <!-- swiper js -->
+    <script src="/static/javascripts/swiper.min.js"></script>
+    <!-- swiper js -->
+    <script src="/static/javascripts/masonry.pkgd.js"></script>
+    <!-- particles js -->
+    <script src="/static/javascripts/owl.carousel.min.js"></script>
+    <!-- <script src="/static/javascripts/jquery.nice-select.min.js"></script> -->
+    <!-- swiper js -->
+    <script src="/static/javascripts/slick.min.js"></script>
+    <script src="/static/javascripts/jquery.counterup.min.js"></script>
+    <script src="/static/javascripts/waypoints.min.js"></script>
+    <script src="/static/javascripts/buttons.html5.min.js"></script>
+    <script src="/static/javascripts/buttons.colVis.min.js"></script>
+    <script src="/static/javascripts/jspdf.min.js"></script>
+    <script src="/static/javascripts/jspdf.plugin.autotable.js"></script>
+    <script src="/static/javascripts/mimic.js"></script>
+    
+    <!-- custom js -->
+    <!-- <script src="/static/javascripts/custom.js"></script> -->
+    <script src="/static/javascripts/common.js"></script>
+    <script src="/static/javascripts/custom.js"></script>
+    <script src="/static/javascripts/jquery.blockUI.js"></script>
+    <script src="/static/javascripts/author-details.js"></script> 
+</body>
+
+</html>

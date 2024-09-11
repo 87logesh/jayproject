@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Journals</title>
+    <link rel="icon" href="images/favicon.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/jquery-ui.css" />
+    <link rel="stylesheet" href="/static/css/dataTables.jqueryui.min.css" /> 
+    <link rel="stylesheet" href="/static/css/scroller.jqueryui.min.css" />
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="/static/css/animate.css">
+    <!-- owl carousel CSS -->
+    <link rel="stylesheet" href="/static/css/owl.carousel.min.css">
+    <!-- themify CSS -->
+    <link rel="stylesheet" href="/static/css/themify-icons.css">
+    <!-- flaticon CSS -->
+    <link rel="stylesheet" href="/static/css/flaticon.css">
+    <!-- font awesome CSS -->
+    <link rel="stylesheet" href="/static/css/magnific-popup.css">
+    
+    <link rel="stylesheet" href="/static/css/fontawesome.min.css">
+    <!-- swiper CSS -->
+    <link rel="stylesheet" href="/static/css/slick.css">
+    <!-- style CSS -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/home.css" />
+    <link rel="stylesheet" href="/static/css/nice-select.css">
+    
+    <link rel="stylesheet" href="/static/css/mimic.css">
+    <link rel="stylesheet" href="/static/css/student-registration.css">
+    <link rel="stylesheet" href="/static/css/staff.css">
+    <link rel="stylesheet" href="/static/css/common.css">
+    
+</head>
+
+<body>
+
+    <!-- <form action="/submitpaper" id="was-validated" autocomplete="off" class="was-validated" method="post" enctype="multipart/form-data"></form> -->
+    <!--::header part start::-->
+    <%- include('header'); %>
+
+
+    <!-- upcoming_event part start-->
+
+    <!-- learning part start-->
+    <form action="/submitpaper" id="was-validated" autocomplete="off" class="was-validated" method="post" enctype="multipart/form-data">
+
+     <% if (typeof message !== 'undefined' && message) { %><strong id="submitpaper_status_panel" <% if (typeof status !== 'undefined' && studentstatus) { %>class="<%= studentstatus %>" <%}%> style="overflow-x: auto;"><%= message %></strong><% } %> 
+      		   <!-- <div class="col-md-8 mb-3 profile-upload-container"> -->
+		         <!-- <input type="file" single id="studentimagefile" name="studentimagefile" accept="image/gif, image/jpeg, image/png" /> -->
+    	         <!-- <img id="uploadfilepaper" src="/static/images/profile-img.png" alt="student image" class="visible" />  -->
+          
+    	          
+    <section class="banner_part_otherpage learning_part submitpaper">
+        <div class="container">
+            <div class="row align-items-sm-center align-items-lg-stretch">
+                <div class="col-md-7 col-lg-7">
+                    <div class="section_tittle align-items-center justify-content-center h-100">
+                        <h2>PAPER SUBMISSION</h2>
+                        
+                    </div>
+                  
+                </div>
+
+                <div class="col-md-7 col-lg-12">
+                    <div class="align-items-center justify-content-center h-100">
+                        <h3>How to Submit</h3>
+                        <p align="justify">Authors can submit their papers online directly to our journal website https://ajrsjournal.com.  Also, they can mail their papers to ajrsjournal@gmail.com with payment proof.  Acceptance may be done after verifying the payment.  At the same time, authors need not send hard copies of paper or CD discs.  Author must give a declaration that "The article has not been published anywhere or sent for publication". Submission is accepted all through the year.  Please keep payment proof until the paper get published.  If there are more than one author, please mention who is the corresponding author.  </p>
+                    </div>
+                </div>
+                
+            
+                <div class="col-md-7 col-lg-12">
+                    <div class="align-items-center justify-content-center h-100">
+                        <h3>Style</h3>
+                        <p align="justify">English : Font Size - 12 pt, Font Name - Times new Roman, Hindi & Marathi : Font Size - 12pt, Font Name - Kruti Dev 010, Shivaji and  Tamil Font size 12pt  in Bamini.  The paper should start with an Abstract, Keywords, Introduction and should end with a Conclusion summarizing the findings of the paper.  Manuscripts, including tables, figures and references should be around 3000-4000 words, in the case of articles and 1000 words for book reviews.  Papers which were presented already in a conference /seminar should be mentioned at the top of the paper. In the same way, papers related to minor / major research project must be clearly mentioned at the top of the first page of the manuscript and the author should specify with whom the copyright vests</p>
+                    </div>
+                </div>
+
+                <div class="col-md-7 col-lg-12">
+                    <div class="align-items-center justify-content-center h-100">
+                        <h3>Publication Ethics and Malpractice Statement</h3>
+                        <p align="justify">Our Journal carries out a range of administrative, fair and professional editorial tasks which are essential for the publications of manuscripts.  Hence, all authors, editors, reviewers and publisher involved in the publication of the journal are requested to stick on to the expected ethical rules. Your cooperation helps us to do things in a much better way.  </p>
+                    </div>
+                </div>
+
+            
+            </section>
+
+
+                <div class="col-lg-12 col-xs-12">
+                    <div class="learning_member_text ">
+                        <div id="accordion" class="container">
+                            <div class="row">
+                                    <div class="col-12 collapse-header card-header" data-toggle="collapse"  data-target="#collapseOne">PAPER DETAILS<i class="fa fa-plus more-less"></i></div>
+                                    <div id="collapseOne" class="panel-collapse collapse show collapse-panel-custom-style" data-parent="#accordion">
+                                        <table id="moneyvalue-registerdetails" class="table table-striped staff-personal-details-custom">
+                                            <tbody>
+                                                <tr>
+                                                    <td colspan="5">
+                                                        <label for="ptitle">Paper Title</label>
+                                                    </td>
+                                                    <td colspan="5">                                         
+                                                            <input type="text" class="form-control form-rounded wrapper" data-toggle="tooltip"  data-placement="top"   id="ptitle"  name="ptitle"  required/><i class="fa fa-question-circle" title="Enter the Title of the Paper"></i>                                                                                                                        
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="5">
+                                                        <label for="arearch">Area of Research</label>
+                                                    </td>
+                                                    <td colspan="5">                                         
+                                                         <input type="text" class="form-control form-rounded wrapper" data-toggle="tooltip"  data-placement="top"   id="arearch"  name="arearch"  required/><i class="fa fa-question-circle" title="Enter your area of research. For example, English"></i>                                                            
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="5">
+                                                        <label for="manutype">Manuscript Type</label>
+                                                    </td>
+                                                    <td colspan="5">                                         
+                                                            
+                                                            
+                                                                <label for="manutype">Manuscript:</label>
+                                                                             <select class="form-control form-rounded"  id="manutype" name="manutype">
+                                                                                <option value="">Select</option>
+                                                                                <% manuscript.forEach(function(manuscriptVal){ %>
+                                                                                    <option value="<%= manuscriptVal.value%>"><%= manuscriptVal.name%></option>
+                                                                                <% }) %>
+                                                                             </select>
+                                                                             <div class="invalid-feedback">Please fill out this field.</div>
+                                                                            
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="5">
+                                                        <label for="noofpages">No of Pages</label>
+                                                    </td>
+                                                    <td colspan="5">                                         
+                                                            <input type="text" class="form-control form-rounded wrapper" data-toggle="tooltip"  data-placement="top"   id="noofpages"  name="noofpages"  required/> <i class="fa fa-question-circle" title="Please enter the no of pages"></i>                                                           
+                                                    </td>
+                                                </tr>
+                                                   
+                                                <tr>
+                                                    <td colspan="5">
+                                                        <label for="uploadfile">Upload Files</label>
+                                                    </td>
+                                                    <td colspan="5">   
+                                                        <div>
+                                                            <h3>Upload Section</h3> <br>
+                                                            
+                                                            <div class="col-md-8 mb-3 profile-upload-container"></div>
+                                                            <input type="file" single id="studentimagefile" name="studentimagefile" accept="image/gif, image/jpeg, image/png, application/pdf, application/msword" />
+                                                            
+                                                            <input type="hidden" name="studentimagebase64" id="studentimagebase64" />
+                                                            
+                                                            
+                                                            <br>
+                                                        </div>
+                                                        
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td colspan="2">
+                                                        <label for="paperbsract">Paper Abstract</label>
+                                                    </td>
+                                                    <td colspan="3">                                         
+                                                       
+                                                        <textarea name="paperbsract" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required" aria-required="true" aria-invalid="false" style="height: 81px;"></textarea><i class="fa fa-question-circle" title="Enter the Abstract of your paper"></i> 
+                                                        
+                                                    </td>
+                                                    <td colspan="2">
+                                                        <label for="keywords">Keywords</label>
+                                                    </td>
+                                                    <td colspan="2">                                         
+                                                        <textarea name="keywords" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required" aria-required="true" aria-invalid="false" style="height: 81px;"></textarea><i class="fa fa-question-circle" title="Enter the keywords of your paper"></i> 
+                                                    </td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                        
+                                    </div>
+
+
+
+
+                                    <div class="col-12 collapse-header card-header" data-toggle="collapse"  data-target="#collapseTwo">FIRST AUTHOR DETAILS<i class="fa fa-plus more-less"></i></div>
+                                    <div id="collapseTwo" class="panel-collapse collapse show collapse-panel-custom-style" data-parent="#accordion">
+                                          <table id="moneyvalue-registerdetails" class="table table-striped staff-personal-details-custom">
+                                              <tbody>
+                                                  <tr>
+                                                      <td colspan="6">
+                                                          <label for="authname">Author Name</label>
+                                                      </td>
+                                                      <td colspan="6">                                         
+                                                              <input type="text" class="form-control form-rounded wrapper" data-toggle="tooltip"  data-placement="top"   id="authname"  name="authname"  required/><i class="fa fa-question-circle" title="Enter your Name"></i>                                                                                                                        
+                                                      </td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td colspan="6">
+                                                          <label for="authcont">Author Contact Number</label>
+                                                      </td>
+                                                      <td colspan="6">                                         
+                                                           <input type="text" class="form-control form-rounded wrapper" data-toggle="tooltip"  data-placement="top"   id="authcont"  name="authcont"  required/><i class="fa fa-question-circle" title="Enter a valid contact Number"></i>                                                            
+                                                      </td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td colspan="6">
+                                                          <label for="authmail">Author Email</label>
+                                                      </td>
+                                                      <td colspan="6">                                         
+                                                           <input type="text" class="form-control form-rounded wrapper" data-toggle="tooltip"  data-placement="top"   id="authmail"  name="authmail"  required/><i class="fa fa-question-circle" title="Enter your Email"></i>                                                            
+                                                      </td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td colspan="6">
+                                                          <label for="designation">Designation</label>
+                                                      </td>
+                                                      <td colspan="6">                                         
+                                                                                          
+                                                                  <label for="designation">Designation:</label>
+                                                                               <select class="form-control form-rounded"  id="designation" name="designation">
+                                                                                  <option value="">Select</option>
+                                                                                  <% designation.forEach(function(designationVal){ %>
+                                                                                      <option value="<%= designationVal.value%>"><%= designationVal.name%></option>
+                                                                                  <% }) %>
+                                                                               </select>
+                                                                               <i class="fa fa-question-circle" title="Select your Designation"></i>  
+                                                                               <div class="invalid-feedback">Please fill out this field.</div>
+                                                                              
+                                                      </td>
+                                                      </tr>
+                                                      <tr>
+                                                          <td colspan="6">
+                                                              <label for="institute">Institute/Organisation</label>
+                                                          </td>
+                                                          <td colspan="6">                                         
+                                                               <input type="text" class="form-control form-rounded wrapper" data-toggle="tooltip"  data-placement="top"   id="institute"  name="institute"  required/><i class="fa fa-question-circle" title="Enter your Institute/Organisation. If you dont have an organisation, then write Independent Researcher"></i>                                                            
+                                                          </td>
+                                                      </tr>
+
+                                                      <tr>
+                                                                                             
+                                                          <td colspan="6">
+                                                              <label for="noofauthors">No of Authors</label>
+                                                          </td>     
+                                                          <td colspan="6">                               
+                                                          <label for="noofauthors">No of Authors:</label>
+                                                                       <select class="form-control form-rounded"  id="noofauthors" name="noofauthors">
+                                                                          <option value="">Select</option>
+                                                                          <% noofauthors.forEach(function(noofauthorsVal){ %>
+                                                                              <option value="<%= noofauthorsVal.value%>"><%= noofauthorsVal.name%></option>
+                                                                          <% }) %>
+                                                                       </select>
+                                                                       <i class="fa fa-question-circle" title="Select No of Authors"></i>  
+                                                                       <div class="invalid-feedback">Please fill out this field.</div>
+                                                          </td>
+                                                    </tr>
+                                                  
+                                                  
+                                              </tbody>
+                                          </table>
+                                      </div> 
+                                  
+
+                                      <div class="col-12 collapse-header card-header" data-toggle="collapse"  data-target="#collapseThree">SECOND AUTHOR DETAILS<i class="fa fa-plus more-less"></i></div>
+                                      <div id="collapseThree" class="panel-collapse collapse show collapse-panel-custom-style" data-parent="#accordion">
+                                            <table id="moneyvalue-registerdetails" class="table table-striped staff-personal-details-custom">
+                                                <tbody>
+                                                    <tr>
+                                                        <td colspan="6">
+                                                            <label for="authname2">Author Name</label>
+                                                        </td>
+                                                        <td colspan="6">                                         
+                                                                <input type="text" class="form-control form-rounded wrapper" data-toggle="tooltip"  data-placement="top"   id="authname2"  name="authname2"  /><i class="fa fa-question-circle" title="Enter your Name"></i>                                                                                                                        
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="6">
+                                                            <label for="authcont2">Author Contact Number</label>
+                                                        </td>
+                                                        <td colspan="6">                                         
+                                                             <input type="text" class="form-control form-rounded wrapper" data-toggle="tooltip"  data-placement="top"   id="authcont2"  name="authcont2"  /><i class="fa fa-question-circle" title="Enter a valid contact Number"></i>                                                            
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="6">
+                                                            <label for="authmail2">Author Email</label>
+                                                        </td>
+                                                        <td colspan="6">                                         
+                                                             <input type="text" class="form-control form-rounded wrapper" data-toggle="tooltip"  data-placement="top"   id="authmail2"  name="authmail2"  /><i class="fa fa-question-circle" title="Enter your Email"></i>                                                            
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="6">
+                                                            <label for="designation2">Designation</label>
+                                                        </td>
+                                                        <td colspan="6">                                         
+                                                                                            
+                                                                    <label for="designation2">Designation:</label>
+                                                                                 <select class="form-control form-rounded"  id="designation2" name="designation2">
+                                                                                    <option value="">Select</option>
+                                                                                    <% designation.forEach(function(designationVal){ %>
+                                                                                        <option value="<%= designationVal.value%>"><%= designationVal.name%></option>
+                                                                                    <% }) %>
+                                                                                 </select>
+                                                                                 <i class="fa fa-question-circle" title="Select your Designation"></i>  
+                                                                                 <div class="invalid-feedback">Please fill out this field.</div>
+                                                                                
+                                                        </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="6">
+                                                                <label for="institute2">Institute/Organisation</label>
+                                                            </td>
+                                                            <td colspan="6">                                         
+                                                                 <input type="text" class="form-control form-rounded wrapper" data-toggle="tooltip"  data-placement="top"   id="institute2"  name="institute2"  /><i class="fa fa-question-circle" title="Enter your Institute/Organisation. If you dont have an organisation, then write Independent Researcher"></i>                                                            
+                                                            </td>
+                                                        </tr>
+
+                                                        
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div> 
+                                    
+
+
+                                        <div class="col-12 collapse-header card-header" data-toggle="collapse"  data-target="#collapseFour">THIRD AUTHOR DETAILS<i class="fa fa-plus more-less"></i></div>
+                                        <div id="collapseFour" class="panel-collapse collapse show collapse-panel-custom-style" data-parent="#accordion">
+                                              <table id="moneyvalue-registerdetails" class="table table-striped staff-personal-details-custom">
+                                                  <tbody>
+                                                      <tr>
+                                                          <td colspan="6">
+                                                              <label for="authname3">Author Name</label>
+                                                          </td>
+                                                          <td colspan="6">                                         
+                                                                  <input type="text" class="form-control form-rounded wrapper" data-toggle="tooltip"  data-placement="top"   id="authname3"  name="authname3"  /><i class="fa fa-question-circle" title="Enter your Name"></i>                                                                                                                        
+                                                          </td>
+                                                      </tr>
+                                                      <tr>
+                                                          <td colspan="6">
+                                                              <label for="authcont3">Author Contact Number</label>
+                                                          </td>
+                                                          <td colspan="6">                                         
+                                                               <input type="text" class="form-control form-rounded wrapper" data-toggle="tooltip"  data-placement="top"   id="authcont3"  name="authcont3"  /><i class="fa fa-question-circle" title="Enter a valid contact Number"></i>                                                            
+                                                          </td>
+                                                      </tr>
+                                                      <tr>
+                                                          <td colspan="6">
+                                                              <label for="authmail3">Author Email</label>
+                                                          </td>
+                                                          <td colspan="6">                                         
+                                                               <input type="text" class="form-control form-rounded wrapper" data-toggle="tooltip"  data-placement="top"   id="authmail3"  name="authmail3"  /><i class="fa fa-question-circle" title="Enter your Email"></i>                                                            
+                                                          </td>
+                                                      </tr>
+                                                      <tr>
+                                                          <td colspan="6">
+                                                              <label for="designation3">Designation</label>
+                                                          </td>
+                                                          <td colspan="6">                                         
+                                                                                              
+                                                                      <label for="designation3">Designation:</label>
+                                                                                   <select class="form-control form-rounded"  id="designation3" name="designation3">
+                                                                                      <option value="">Select</option>
+                                                                                      <% designation.forEach(function(designationVal){ %>
+                                                                                          <option value="<%= designationVal.value%>"><%= designationVal.name%></option>
+                                                                                      <% }) %>
+                                                                                   </select>
+                                                                                   <i class="fa fa-question-circle" title="Select your Designation"></i>  
+                                                                                   <div class="invalid-feedback">Please fill out this field.</div>
+                                                                                  
+                                                          </td>
+                                                          </tr>
+                                                          <tr>
+                                                              <td colspan="6">
+                                                                  <label for="institute3">Institute/Organisation</label>
+                                                              </td>
+                                                              <td colspan="6">                                         
+                                                                   <input type="text" class="form-control form-rounded wrapper" data-toggle="tooltip"  data-placement="top"   id="institute3"  name="institute3"  /><i class="fa fa-question-circle" title="Enter your Institute/Organisation. If you dont have an organisation, then write Independent Researcher"></i>                                                            
+                                                              </td>
+                                                          </tr>
+  
+                                                          
+                                                      
+                                                  </tbody>
+                                              </table>
+                                          </div> 
+                                      
+
+
+                                          <div class="col-12 collapse-header card-header" data-toggle="collapse"  data-target="#collapseFive">FOURTH AUTHOR DETAILS<i class="fa fa-plus more-less"></i></div>
+                                          <div id="collapseFive" class="panel-collapse collapse show collapse-panel-custom-style" data-parent="#accordion">
+                                                <table id="moneyvalue-registerdetails" class="table table-striped staff-personal-details-custom">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td colspan="6">
+                                                                <label for="authname4">Author Name</label>
+                                                            </td>
+                                                            <td colspan="6">                                         
+                                                                    <input type="text" class="form-control form-rounded wrapper" data-toggle="tooltip"  data-placement="top"   id="authname4"  name="authname4"  /><i class="fa fa-question-circle" title="Enter your Name"></i>                                                                                                                        
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="6">
+                                                                <label for="authcont4">Author Contact Number</label>
+                                                            </td>
+                                                            <td colspan="6">                                         
+                                                                 <input type="text" class="form-control form-rounded wrapper" data-toggle="tooltip"  data-placement="top"   id="authcont4"  name="authcont4"  /><i class="fa fa-question-circle" title="Enter a valid contact Number"></i>                                                            
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="6">
+                                                                <label for="authmail4">Author Email</label>
+                                                            </td>
+                                                            <td colspan="6">                                         
+                                                                 <input type="text" class="form-control form-rounded wrapper" data-toggle="tooltip"  data-placement="top"   id="authmail4"  name="authmail4"  /><i class="fa fa-question-circle" title="Enter your Email"></i>                                                            
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="6">
+                                                                <label for="designation4">Designation</label>
+                                                            </td>
+                                                            <td colspan="6">                                         
+                                                                                                
+                                                                        <label for="designation4">Designation:</label>
+                                                                                     <select class="form-control form-rounded"  id="designation4" name="designation4">
+                                                                                        <option value="">Select</option>
+                                                                                        <% designation.forEach(function(designationVal){ %>
+                                                                                            <option value="<%= designationVal.value%>"><%= designationVal.name%></option>
+                                                                                        <% }) %>
+                                                                                     </select>
+                                                                                     <i class="fa fa-question-circle" title="Select your Designation"></i>  
+                                                                                     <div class="invalid-feedback">Please fill out this field.</div>
+                                                                                    
+                                                            </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="6">
+                                                                    <label for="institute4">Institute/Organisation</label>
+                                                                </td>
+                                                                <td colspan="6">                                         
+                                                                     <input type="text" class="form-control form-rounded wrapper" data-toggle="tooltip"  data-placement="top"   id="institute4"  name="institute4"  /><i class="fa fa-question-circle" title="Enter your Institute/Organisation. If you dont have an organisation, then write Independent Researcher"></i>                                                            
+                                                                </td>
+                                                            </tr>
+    
+                                                            
+                                                        
+                                                    </tbody>
+                                                </table>
+                                            </div> 
+                                        
+  
+
+
+
+
+
+
+
+
+
+                                </div>
+                                        
+                                  
+                        </div>
+
+                        <div class="container">
+                        <div class="form-group form-check">
+                            <label class="form-check-label">
+                               <input class="form-check-input" type="checkbox" name="remember" required> I agree the terms & conditions.
+                               <div class="invalid-feedback">Check this checkbox to continue.</div>
+                            </label>
+                         </div>
+
+                                <input id="submitpaper_save_btn" type="submit" value="Save"
+                                   class="btn btn-primary pull-left btn-submit" style="margin-right: 10px"/>
+                                <a id="submitpape_clear_btn" class="btn btn-primary" href="/submitpaper" role="button">Clear</a>
+                                        
+                        </div>
+                    
+    </form>
+
+    <!-- footer part start-->
+    <%- include('footer'); %>
+    <!-- footer part end-->
+
+    <!-- jquery plugins here-->
+    <!-- jquery -->
+    <script src="/static/javascripts/jquery-1.12.1.min.js"></script>
+    <!-- popper js -->
+    <script src="/static/javascripts/popper.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="/static/javascripts/bootstrap.min.js"></script>
+    <!-- easing js -->
+    <script src="/static/javascripts/jquery.magnific-popup.js"></script>
+    <!-- swiper js -->
+    <script src="/static/javascripts/swiper.min.js"></script>
+    <!-- swiper js -->
+    <script src="/static/javascripts/masonry.pkgd.js"></script>
+    <!-- particles js -->
+    <script src="/static/javascripts/owl.carousel.min.js"></script>
+    <!-- <script src="/static/javascripts/jquery.nice-select.min.js"></script> -->
+    <!-- swiper js -->
+    <script src="/static/javascripts/slick.min.js"></script>
+    <script src="/static/javascripts/jquery.counterup.min.js"></script>
+    <script src="/static/javascripts/waypoints.min.js"></script>
+    <!-- custom js -->
+    <!-- <script src="/static/javascripts/custom.js"></script> -->
+    <script src="/static/javascripts/common.js"></script>
+    <script src="/static/javascripts/custom.js"></script>
+    <script src="/static/javascripts/jquery.blockUI.js"></script>
+    <script src="/static/javascripts/submitpaper.js"></script>
+</body>
+
+</html>

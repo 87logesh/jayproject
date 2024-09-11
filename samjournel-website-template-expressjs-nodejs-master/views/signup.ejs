@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>GASC, ARAKKONAM</title>
+<link rel="stylesheet" href="/static/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/static/css/login.css" />
+
+
+
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/popper.min.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+  <div class="container">
+  <img src="/static/images/college-banner.png" alt="Logo" style="width:100%">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-signin my-5">
+          <div class="card-body">
+            <% if (typeof message !== 'undefined' && message) { %><strong id="signup_status_panel" <% if (typeof signupstatus !== 'undefined' && signupstatus) { %>class="<%= signupstatus %>" <%}%> style="overflow-x: auto;"><%= message %></strong><% } %>
+            <h5 class="card-title text-center">SIGNUP</h5>
+            <form class="form-signin" class="was-validated" autocomplete="off" action="/signup" method="post">
+              <div class="form-label-group">
+                <input  class="form-control input-size-medium" id="gasca_staffno"  type="text"  maxlength="4"  pattern="[1-9][0-9]{3}" name="gasca_staffno"
+							  placeholder="gasca staffno..." required/><label for="gasca_staffno">STAFFNO AS USERNAME</label><div class="invalid-feedback">Please fill out this field.</div>
+              </div>
+              <div class="form-label-group">
+                <input  class="form-control input-size-medium" id="gasca_staffname" type="text" name="gasca_staffname"
+							  placeholder="gasca staffname..." required/><label for="gasca_staffname">STAFF NAME</label><div class="invalid-feedback">Please fill out this field.</div>
+              </div>
+              <div class="form-label-group">
+                <input  class="form-control input-size-medium" id="gasca_staffemail" type="email" name="gasca_staffemail"
+							  placeholder="gasca email..." required/><label for="gasca_staffemail">STAFF EMAIL</label><div class="invalid-feedback">Please fill out this field.</div>
+              </div>
+              <div class="form-label-group">
+                <input  class="form-control input-size-medium" id="gasca_staffcontactno" type="text" pattern="[6789][0-9]{9}" name="gasca_staffcontactno"
+							  placeholder="gasca contact..." required/><label for="gasca_staffcontactno">STAFF CONTACT NO</label><div class="invalid-feedback">Please fill out this field.</div>
+              </div>
+              <div class="form-label-group">
+                <input  class="form-control input-size-medium" id="gasca_password" type="password" name="gasca_password"
+							  placeholder="gasca password..." required/><label for="gasca_password">PASSWORD</label><div class="invalid-feedback">Please fill out this field.</div>
+              </div>
+              <div class="form-label-group">
+                <input  class="form-control input-size-medium" id="gasca_confirmpass" type="password" name="gasca_confirmpass"
+							  placeholder="gasca confirm password..." required/><label for="gasca_confirmpass">CONFIRM PASSWORD</label><div class="invalid-feedback">Please fill out this field.</div>
+              </div>
+              <button id="myButton" class="btn btn-lg btn-primary btn-block text-uppercase"  type="submit">SIGNUP</button>
+              
+              <a href="/home">Click here to goto Home Page</a>
+
+              <!-- <script type="text/javascript">
+                document.getElementById("myButton").onclick = function () {
+                    location.href = '/signup';
+                };
+                </script> -->
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
