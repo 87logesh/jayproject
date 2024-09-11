@@ -1,0 +1,117 @@
+ajrsjournal@gmail.com
+
+Ajrs@2023
+
+
+
+AWS USername :  ajrsjournal@gmail.com
+
+AWS Password
+
+Ajrs@2023
+
+
+AWS RDS - Username - ajrsjournal
+password : ajrsjournal
+
+db name : samjournal
+
+ajrs-db.c3ik60saqctw.ap-south-1.rds.amazonaws.com
+
+
+ip address : 65.2.191.169
+
+ec2-user@65.2.191.169
+
+
+https://65.2.191.169:8443
+
+
+
+
+sudo su root
+
+Step 1 ) Stop Container - 
+docker container stop $(docker container ls -aq)
+
+Step 2) Remove Container -- 
+docker rm --force <token>
+Step 3 ) Navigate to samjournal module folder
+    cd /app/samproject/samjournel-website-template-expressjs-nodejs-master
+
+step 4) Pull github code from repo as below
+git pull --no-commit https://g.j.logeshkumar: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@github.com/87logesh/samproject.git
+
+
+
+step 5) to create docker image run below command
+    docker build . -t samproject/samjournel-website-template-expressjs-nodejs-master
+
+
+step 6) To run docker container with environment variable
+     
+
+    docker run -p 8443:8443 -d --restart unless-stopped --name samjournel-website-template-expressjs-nodejs-master -e port=8443 -e dbhost="ajrs-db.c3ik60saqctw.ap-south-1.rds.amazonaws.com" -e dbname="samjournal" -e dbuser="ajrsjournal" -e dbpwd="ajrsjournal" samproject/samjournel-website-template-expressjs-nodejs-master
+
+
+step 7) To see Avtive Running Conatiner 
+
+		docker ps -a
+
+
+
+
+
+For cleaning the Temp files
+**********************************
+
+
+
+Step 1 ) Stop Container - 
+docker container stop $(docker container ls -aq)
+
+Step 2) Remove Container -- 
+docker rm --force <token>
+docker system prune
+docker system prune -a  
+
+
+For the First time CLoning Git  
+******************
+
+sudo yum update
+sudo yum install git
+git version
+
+sudo yum install docker
+
+
+
+
+
+mkdir -p /app
+cd /app
+git clone https://g.j.logeshkumar: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@github.com/87logesh/samproject.git
+
+
+
+
+
+before step 5) to create docker image run below command
+
+systemctl start docker
+
+
+
+
+
+AWS to Localhost XAMPP
+
+>mysqldump --databases samjournal -h ajrs-db.c8qihd463fmu.ap-south-1.rds.amazonaws.com -u ajrsjournal -pajrsjournal > samjournal.sql
+
+
+
+
+XAMPP to AWS  RDS db 
+
+mysqldump -u root --databases samjournal --single-transaction  --skip-triggers --compress --order-by-primary | mysql -u ajrsjournal --port=3306 --host=ajrs-db.c3ik60saqctw.ap-south-1.rds.amazonaws.com -pajrsjournal

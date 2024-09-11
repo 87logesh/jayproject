@@ -1,0 +1,15 @@
+CREATE TRIGGER submipaper_idno_inc BEFORE INSERT ON submitpaper
+FOR EACH ROW 
+SET NEW.idno = (SELECT MAX(idno) + 1 FROM submitpaper);
+
+
+
+CREATE TRIGGER authordetails_idno_inc BEFORE INSERT ON author_details
+FOR EACH ROW 
+SET NEW.idno = (SELECT MAX(idno) + 1 FROM author_details);
+
+
+
+CREATE TRIGGER authordetails2_idno_inc BEFORE INSERT ON author_details2
+FOR EACH ROW 
+SET NEW.idno = (SELECT MAX(idno) + 1 FROM author_details1);

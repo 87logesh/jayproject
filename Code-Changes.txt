@@ -1,0 +1,79 @@
+
+const express = require("express");
+const bodyParser = require('body-parser');
+const isNullOrEmpty = require('is-null-or-empty');
+const session = require('express-session');
+const cache = require('memory-cache');
+const isJSON = require('is-valid-json')
+// const dateFormat = require('dateformat')
+const mysql      = require('mysql');
+const path_module = require('path');
+const fileUpload = require('express-fileupload');
+
+const port = process.env.port ? process.env.port : 3000;
+// const dbhost = process.env.dbhost ? process.env.dbhost : "ajrs-db.c8qihd463fmu.ap-south-1.rds.amazonaws.com";
+// const dbuser = process.env.dbuser ? process.env.dbuser : "ajrsjournal";
+// const dbpwd = process.env.dbpwd ? process.env.dbpwd : "ajrsjournal";
+// const dbname = process.env.dbname ? process.env.dbname : "samjournal";
+
+
+ const dbhost = process.env.dbhost ? process.env.dbhost : "localhost";
+ const dbuser = process.env.dbuser ? process.env.dbuser : "root";
+ const dbpwd = process.env.dbpwd ? process.env.dbpwd : "";
+ const dbname = process.env.dbname ? process.env.dbname : "samjournal";
+
+
+// var path = require('path');
+// var logger = require('morgan');
+// var cookieParser = require('cookie-parser');
+// var indexRouter = require('./routes/index');
+// var usersRouter = require('./routes/users');
+
+// var path = require('path');
+const app = express();
+app.use('/images', express.static('images')); 
+app.use('/fonts', express.static('fonts')); 
+app.use('/javascripts', express.static('javascripts')); 
+app.use('/stylesheets', express.static('stylesheets')); 
+app.set('trust proxy', 1)
+app.set('view engine', 'ejs');
+const router = express.Router({strict: true});
+const path = __dirname + '/views/';
+
+
+
+
+
+app.use(express.static('public'));
+global.__basedir = __dirname;
+
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({limit: '2000mb', extended: true}))
+
+// parse application/json
+app.use(bodyParser.json({limit: '2000mb', extended: true}))
+app.use(fileUpload({
+	limits: { fileSize: 5 * 1024 * 1024 },
+  }));
+app.use(session({
+  secret: 'work hard',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { maxAge: (60000 * 480) }
+}));
+
+// app.use('/', indexRouter);
+// app.use('/users', usersRouter);
+
+var connection = mysql.createConnection({
+	multipleStatements: true,
+	host     : dbhost,
+	user     : dbuser,
+	password : dbpwd,
+	database : dbname,
+  
+	charset : 'utf8'
+  });
+  connection.connect();
+  
+  //Navigatinng to home page.

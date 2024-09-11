@@ -1,0 +1,42 @@
+In step 1 – for amazon Linux, the highlighted line is required
+
+ 
+
+Step 1:
+
+sudo yum update -y
+
+sudo amazon-linux-extras install epel
+sudo yum install nginx -y
+
+sudo yum install -y certbot
+
+sudo certbot certonly --standalone -d ajrsjournal.com -d www.ajrsjournal.com
+
+
+sudo sh -c 'echo "0 12 * * * /usr/bin/certbot renew --quiet" >> /etc/crontab'
+
+*****Update below content in/etc/nginx/nginx.conf
+
+server {
+
+      listen 443 ssl;
+
+      server_name gascarakkonam.ac.in www.gascarakkonam.ac.in;
+
+ 
+
+      ssl_certificate /etc/letsencrypt/live/gascarakkonam.ac.in/fullchain.pem;
+
+      ssl_certificate_key /etc/letsencrypt/live/gascarakkonam.ac.in/privkey.pem;
+
+ 
+
+      location / {
+
+          proxy_pass http://localhost:8443;
+	  client_max_body_size 100m;
+
+      }
+
+  }

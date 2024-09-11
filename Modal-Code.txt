@@ -1,0 +1,124 @@
+    <!-- <div class="modal fade" id="exampleModalGrid" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title" id="exampleModalLabel">Editorial Board</h5>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                          
+                                    <div class="modal-body">
+                                      
+                                          <img src="/static/images/special_cource_1.jpg" width="100" height="100" class="special_img" alt="">
+                                           <h4><a class="indexpage_custom" href="#">Dr.P.Samuel</a></h4>
+                                           <h5><a class="indexpage_custom" href="#">M.A., B.Ed., M.Phil., Ph.D.,</a></h5>
+                                          <h5><a class="indexpage_custom" href="#">Assistant Professor & Head,</a></h5>
+                                          <h5><a class="indexpage_custom" href="#">PG Department of English,</a></h5>
+                                          <h5><a class="indexpage_custom" href="#">Government Arts And Science College,</a></h5>
+                                          <h5><a class="indexpage_custom" href="#"> Arakkonam - 631051</a></h5>
+                                          <h5><a class="indexpage_custom" href="#">Executive Editor</a></h5>
+                                          <h5><a class="indexpage_custom" href="#">AJRS JOURNAL</a></h5>
+                                      
+                          
+                                       <div class="modal-footer">
+                                           
+                                      
+                                        </div> 
+                                    </div>
+
+
+                                    <div class="modal-body">
+                                      
+                                        <img src="/static/images/special_cource_2.jpg" width="100" height="100" class="special_img" alt="">
+                                        <h4><a class="indexpage_custom" href="#">Prof.P.Hephzibah</a></h4>
+                                        <h5><a class="indexpage_custom" href="#">M.A(Eng).,M.A(Psy)., M.Ed., M.Phil., B.Sc., Ph.D.,</a></h5>
+                                        <h5><a class="indexpage_custom" href="#">Assistant Professor & Head,</a></h5>
+                                          <h5><a class="indexpage_custom" href="#">Department of English,</a></h5>
+                                          <h5><a class="indexpage_custom" href="#">(Jaya)- Arakkonam Arts And Science College,</a></h5>
+                                          <h5><a class="indexpage_custom" href="#"> Arakkonam </a></h5>
+                                        <h5><a class="indexpage_custom" href="#">Editor in  Chief</a></h5>
+                                        <h5><a class="indexpage_custom" href="#">AJRS JOURNAL</a></h5>
+                                      
+                          
+                                    <div class="modal-footer">
+                                     
+                                      
+                                    </div>
+
+
+                                    <div class="modal-body">
+                                      
+                                        <img src="/static/images/special_cource_3.jpg" width="100" height="100" class="special_img" alt="">
+                                        <h4><a class="indexpage_custom" href="#">Dr.R.Jayasankar</a></h4>
+                                        <h5><a class="indexpage_custom" href="#">M.Sc., B.Ed., M.Phil., Ph.D., SET., NET.,</a></h5>
+                                        <h5><a class="indexpage_custom" href="#">Assistant Professor of Mathematics, </a></h5>
+                                        <h5><a class="indexpage_custom" href="#">Government Arts And Science College, </a></h5>
+                                        <h5><a class="indexpage_custom" href="#">Associate Editor</a></h5>
+                                        <h5><a class="indexpage_custom" href="#">AJRS JOURNAL</a></h5>
+                                      
+                          
+                                    <div class="modal-footer">
+                                     
+                                      
+                                    </div>
+
+
+                                   
+                                    <div class="modal-body">
+                                      
+                                        <img src="/static/images/special_cource_5.jpg" width="100" height="100" class="special_img" alt="">
+                                        <h4><a class="indexpage_custom" href="#">Dr V. Francis.,  </a></h4>
+                                        <h5><a class="indexpage_custom" href="#">Ph.D., </a></h5>
+                                        <h5><a class="indexpage_custom" href="#">Associate Professor & Head,  </a></h5>
+                                        <h5><a class="indexpage_custom" href="#">PG & Research Department of English, St.Joseph's College  </a></h5>
+                                        <h5><a class="indexpage_custom" href="#">PG & Research Department of English, St.Joseph's College(Autonomous),  </a></h5>
+                                        <h5><a class="indexpage_custom" href="#">Tiruchirapalli, Tamilnadu </a></h5>
+                                        <h5><a class="indexpage_custom" href="#">Associate Editor</a></h5>
+                                        <h5><a class="indexpage_custom" href="#">AJRS JOURNAL</a></h5>
+                                      
+                          
+                                    <div class="modal-footer">
+                                     
+                                      
+                                    </div>
+
+
+                                    <div class="modal-body">
+                                      
+                                        <img src="/static/images/special_cource_6.jpg" width="100" height="100" class="special_img" alt="">
+                                        <h4><a class="indexpage_custom" href="#">Dr S Selva Arul Pandian.,  </a></h4>
+                                        <h5><a class="indexpage_custom" href="#">M. Sc, M Phil.,  Ph D.,  MBA.,  PGDCA.,</a></h5>
+                                        <h5><a class="indexpage_custom" href="#">Assistant Professor, Department of Statistics,  </a></h5>
+                                        <h5><a class="indexpage_custom" href="#">Loyola College, Chennai </a></h5>
+                                        <h5><a class="indexpage_custom" href="#">Associate Editor</a></h5>
+                                        <h5><a class="indexpage_custom" href="#">AJRS JOURNAL</a></h5>
+                                      
+                          
+                                    <div class="modal-footer">
+                                      
+                                      
+                                    </div>
+
+
+                                    <div class="modal-body">
+                                      
+                                        <img src="/static/images/special_cource_4.png" width="100" height="100" class="special_img" alt="">
+                                        <h4><a class="indexpage_custom" href="#">Dr.S.Selvakani., </a></h4>
+                                        <h5><a class="indexpage_custom" href="#">M.C.A., M.Phil., M.Tech., Ph.D.,</a></h5>
+                                        <h5><a class="indexpage_custom" href="#">Assistant Professor & Head, Department of Computer Science, </a></h5>
+                                        <h5><a class="indexpage_custom" href="#">Government Arts And Science College,Arakkonam </a></h5>
+                                        <h5><a class="indexpage_custom" href="#">Associate Editor</a></h5>
+                                        <h5><a class="indexpage_custom" href="#">AJRS JOURNAL</a></h5>
+                                      
+                          
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                      
+                                    </div>
+
+
+                                </div>
+                              </div>
+                            
+                        </div> -->
+                    

@@ -1,0 +1,34 @@
+SHOW CREATE TABLE author_details;
+
+
+
+CREATE TABLE `author_details2` (
+  `sno` int(11) NOT NULL AUTO_INCREMENT,
+  `idno` int(11) NOT NULL,
+  `authname2` varchar(100) NOT NULL,
+  `authcont2` varchar(20) NOT NULL,
+  `authmail2` varchar(20) NOT NULL,
+  `designation2` int(10) NOT NULL,
+  `institute2` varchar(100) NOT NULL,
+  `createtime` date NOT NULL,
+  PRIMARY KEY (`sno`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4
+
+select * from submitpaper
+
+select* from author_details
+
+select* from author_details2
+
+select * from author_details2
+
+insert into author_details2 (authname2,authcont2,authmail2,designation2,institute2,createtime) VALUES ('v1','v1','v1','4','v1','2023-08-31 12:02:04.619')
+
+show triggers
+
+
+CREATE TRIGGER authordetails2_idno_inc BEFORE INSERT ON author_details2
+FOR EACH ROW 
+SET NEW.idno = (SELECT MAX(idno) FROM author_details);
+
+drop trigger authordetails2_idno_inc
