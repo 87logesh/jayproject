@@ -152,7 +152,7 @@ a:hover {
 /* line 72, E:/172 Etrain Education/172_Etrain_Education_html/sass/_common.scss */
 h1, h2, h3, h4, h5, h6 {
   /*color: #0c2e60;*/
-  color: #eb2929;
+  color: #aeb914;
   font-family: "Poppins", sans-serif;
 }
 
@@ -170,7 +170,7 @@ p {
 h2 {
   font-size: 44px;
   line-height: 28px;
-  color: #0c2e60;
+  color: #2e0e3a;
   font-weight: 600;
   line-height: 1.222;
 }
@@ -260,7 +260,7 @@ a:focus, .button:focus, button:focus, .btn:focus {
 /* line 140, E:/172 Etrain Education/172_Etrain_Education_html/sass/_common.scss */
 .section_tittle h2 {
   font-size: 42px;
-  color: #0c2e60;
+  color: #2e0e3a;
   line-height: 37px;
   font-weight: 700;
   position: relative;
